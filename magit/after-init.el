@@ -1,0 +1,6 @@
+(ad-disable-advice 'magit-status 'around 'magit-fullscreen)
+(ad-activate 'magit-status)
+(ad-disable-advice 'magit-log 'around 'magit-fullscreen)
+(ad-activate 'magit-log)
+(setq with-editor-emacsclient-executable "emacsclient")
+(setq magit-ediff-dwim-show-on-hunks t)
