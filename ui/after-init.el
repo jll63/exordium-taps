@@ -41,8 +41,6 @@
 
 (global-set-key [pause] 'toggle-window-dedicated)
 
-(put 'erase-buffer 'disabled nil)
-
 (global-set-key [meta q] 'fill-paragraph)
 (setq compilation-scroll-output 'first-error)
 
@@ -59,9 +57,11 @@
 
 (global-set-key (kbd "<C-prior>") 'backward-paragraph)
 (global-set-key (kbd "<C-next>") 'forward-paragraph)
+
 (defun comint-set-erase-buffer-key ()
   (interactive)
-  (local-set-key (kbd "<C-M-delete>") 'erase-buffer))
+  (local-set-key (kbd "<C-M-backspace>") 'erase-buffer))
+(put 'erase-buffer 'disabled nil)
 
 (add-hook 'comint-mode-hook 'comint-set-erase-buffer-key)
 
