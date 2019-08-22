@@ -15,8 +15,6 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-(setq compilation-window-height 1000)
-(setq compilation-window-width 1000)
 ;; Make compilation buffer reuse window/frame
 (push '("\\*compilation\\*" . (nil (reusable-frames . t))) display-buffer-alist)
 
