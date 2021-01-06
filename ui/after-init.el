@@ -76,3 +76,13 @@ and `helm-swoop-split-direction' settings."
 
 (add-to-list 'display-buffer-alist
              '("^\\*shell\\*$" . (display-buffer-same-window)))
+
+(put 'narrow-to-region 'disabled nil)
+
+(defun yank-gui ()
+     (interactive)
+     (let ((primary (gui-get-primary-selection)))
+       (push-mark)
+       (insert-for-yank primary)))
+
+(global-set-key [(shift insert)] #'yank-gui)
