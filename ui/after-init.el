@@ -40,7 +40,6 @@
 (global-set-key [pause] 'toggle-window-dedicated)
 
 (global-set-key [meta q] 'fill-paragraph)
-(setq compilation-scroll-output 'first-error)
 
 (defun gcm-scroll-down ()
   (interactive)
